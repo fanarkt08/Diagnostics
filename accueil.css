@@ -1,0 +1,133 @@
+/* Réinitialisation des marges et du padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style global du body pour utiliser flex */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    display: flex;               /* Utilisation de Flexbox */
+    flex-direction: column;      /* Organiser les éléments verticalement */
+    min-height: 100vh;           /* Garantir que la hauteur minimale soit la taille de l'écran */
+}
+
+/* Style du Header */
+.head {
+    display: flex;
+    justify-content: flex-end;   /* Aligner les éléments à droite */
+    align-items: center;         /* Centrer les éléments verticalement */
+    background-color: #fff;
+    padding: 20px 50px;
+    position: fixed;             /* Fixer l'en-tête en haut */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+/* Alignement des liens et images dans le header */
+.right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-link {
+    font-size: 15px;
+    font-family: 'Product Sans', sans-serif;
+    color: black;
+    text-decoration: none;
+}
+
+.header-link:hover {
+    text-decoration: underline;  /* Effet de survol */
+}
+
+.header-img, .account-img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;  /* Conserver le ratio d'image */
+}
+
+.account-img {
+    border-radius: 50%;  /* Rendre l'icône ronde */
+}
+
+/* Style du Main */
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column; /* Changer la direction en colonne pour que l'image soit au-dessus du rectangle */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Style du rectangle principal dans le main */
+.main-rectangle {
+    width: 600px;
+    height: 50px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between; /* Espacer les éléments à gauche et à droite */
+    align-items: center;
+    border-radius: 30px;
+    text-align: center;
+    margin: 20px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 0 20px; /* Ajoute de l'espace entre le texte et les images */
+}
+
+.main-content {
+    margin-bottom: 20px; /* Espace entre l'image et le rectangle */
+}
+
+.main-content img {
+    max-width: 300px; /* L'image occupe 100% de la largeur du conteneur */
+    height: auto;
+}
+
+.main-rectangle img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    margin: 0 10px; /* Ajoute un espace autour des images */
+}
+
+/* Style du Footer */
+footer {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-rectangle {
+    width: 250px; /* Largeur du rectangle */
+    height: 50px;
+    background-color: #a9ceff;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    display: flex;
+    justify-content: center; /* Centrer le texte à l'intérieur du rectangle */
+    align-items: center;     /* Centrer le texte verticalement */
+    border-radius: 30px;
+    text-align: center;
+    margin: 20px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: absolute;      /* Positionner le footer en bas */
+    right: 20px;             /* Placer le rectangle tout à droite */
+    bottom: 20px;            /* Placer le rectangle en bas de l'écran */
+}
+
+.footer-rectangle img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    margin: 0 10px; /* Ajoute un espace autour des images */
+}
